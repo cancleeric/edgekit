@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edgekit"
+version = "0.1.0"
+description = "Classical Canny edge detection from scratch in NumPy (no OpenCV)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Eric Wang", email = "cancleeric@users.noreply.github.com" }]
+keywords = ["computer-vision", "edge-detection", "canny", "numpy", "image-processing"]
+dependencies = ["numpy>=1.24", "pillow>=9.5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["edgekit*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

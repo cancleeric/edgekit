@@ -4,6 +4,9 @@ The **Canny edge detector built from scratch in NumPy** — no OpenCV, no SciPy.
 Every stage of the classic algorithm is a small, readable function, so you can
 see exactly how an edge map is produced from raw pixels.
 
+![pipeline stages](docs/montage.png)
+*input · Gaussian blur · Sobel gradient · non-max suppression · final edges — all computed in NumPy.*
+
 ## The pipeline
 
 ```
